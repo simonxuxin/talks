@@ -1,5 +1,5 @@
 struct object {
-    char name[32];
+    char* name;
     int size;
 };
 
