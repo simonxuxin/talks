@@ -1,8 +1,10 @@
-\documentclass[t]{beamer}
+\documentclass[c]{beamer}
+\usepackage{color}
+\usepackage{verbatim}
 \usetheme{Boadilla}
 \setbeamerfont{structure}{family=\rmfamily,shape=\itshape}
 
-\title{A short VIM tips}
+\title{Five things you need to know about VIM}
 \author{Simon Xu}
 \institute{PayPal}
 \date{May 2012}
@@ -15,11 +17,78 @@
 
 \begin{frame}{Move Around Quickly}
     \begin{itemize}
-    \item Get away arrow-keys
+        \item Throw Away arrow-keys
         \pause
-    \item Use c j k l 
-        \pause
+        \item C {\color{blue}J} K {\color{blue}L}
     \end{itemize}
 \end{frame}
 
+\begin{frame}[fragile]{Move Around Quickly}
+    \begin{verbatim}
+    #!/usr/bin/env perl
+    my $happyness = VI::Improved->new();_
+    \end{verbatim}
+    \pause
+    
+    \begin{itemize}
+        \item \verb|^ $|
+        \pause
+        \item w W b B
+        \pause
+        \item f F      
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Search efficiently}
+    \begin{itemize}
+        \item set incsearch
+        \pause
+        \item set hlsearch
+        \pause
+        \item \verb=[{ %= 
+        \pause
+        \item gd (jump the local declaration of a variable)
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Typing smart}
+    We meet with awkward things when typing every day
+    \pause
+    \begin{verbatim}
+        pp_scratch_risk_mo
+        wtransaction_base_id
+        s_decay_1_ccsent_success_count
+        .SET ERRORLEVEL 3807 SEVERITY 0
+        ...
+    \end{verbatim}
+    \pause
+    
+    \begin{itemize}
+        \item copy-paste
+        \pause
+        \item abbr
+        \pause
+        \item Ctrl+N
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Do we really need an IDE?}
+    \begin{itemize}
+        \item key mapping
+        \pause
+        \item tab pages
+        \pause
+        \item auto format
+        \pause
+        \item thousands of plugins
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Miscellaneous}
+    \begin{itemize}
+        \item set paste
+        \pause
+        \item vimdiff
+    \end{itemize}
+\end{frame}
 \end{document}
