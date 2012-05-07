@@ -1,10 +1,11 @@
 \documentclass[c]{beamer}
 \usepackage{color}
 \usepackage{verbatim}
-\usetheme{Boadilla}
+\usepackage{hyperref}
+\usetheme{default}
 \setbeamerfont{structure}{family=\rmfamily,shape=\itshape}
 
-\title{Five things you need to know about VIM}
+\title{A short VIM tips}
 \author{Simon Xu}
 \institute{PayPal}
 \date{May 2012}
@@ -17,29 +18,31 @@
 
 \begin{frame}{Move Around Quickly}
     \begin{itemize}
+        \pause
         \item Throw Away arrow-keys
         \pause
-        \item C {\color{blue}J} K {\color{blue}L}
+        \item H {\color{blue}J} K {\color{blue}L}
     \end{itemize}
 \end{frame}
 
 \begin{frame}[fragile]{Move Around Quickly}
     \begin{verbatim}
     #!/usr/bin/env perl
-    my $happyness = VI::Improved->new();_
+    my $happyness = VI::Improved->release();_
     \end{verbatim}
     \pause
     
     \begin{itemize}
-        \item \verb|^ $|
-        \pause
         \item w W b B
+        \pause
+        \item \verb|^ $|
         \pause
         \item f F      
     \end{itemize}
 \end{frame}
 
 \begin{frame}[fragile]{Search efficiently}
+    \pause
     \begin{itemize}
         \item set incsearch
         \pause
@@ -52,7 +55,7 @@
 \end{frame}
 
 \begin{frame}[fragile]{Typing smart}
-    We meet with awkward things when typing every day
+    We type awkward things every day
     \pause
     \begin{verbatim}
         pp_scratch_risk_mo
@@ -66,27 +69,33 @@
     \begin{itemize}
         \item copy-paste
         \pause
+        \item yank-paste
+        \pause
         \item abbr
         \pause
-        \item Ctrl+N
+        \item Ctrl+N, CTRL+P
+        \pause
+        \item omni-complete(Ctrl+X Ctrl+O)
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Do we really need an IDE?}
+\begin{frame}{Extend VIM}
+    \pause
     \begin{itemize}
+        \item ! (execute an external command)
+        \pause
         \item key mapping
         \pause
-        \item tab pages
-        \pause
-        \item auto format
-        \pause
-        \item thousands of plugins
+        \item vim script(\url{http://www.vim.org/scripts/index.php})
     \end{itemize}
 \end{frame}
 
 \begin{frame}{Miscellaneous}
+    \pause
     \begin{itemize}
-        \item set paste
+        \item substitute
+        \pause
+        \item multiple-editing(tabpage \& split)
         \pause
         \item vimdiff
     \end{itemize}
